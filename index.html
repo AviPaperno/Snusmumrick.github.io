@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8">
-  <title>Цвет</title>
- </head>
- <body>   
-  <form action="handler.php">
-   <p>Укажите цвет фона: <input type="color" name="bg" value="#ff0000">
-   <input type="submit" value="Выбрать"></p>
-  </form>
- </body>
+<body>
+<script language="JavaScript">
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition( function (position) { document.getElementById("latitude").innerHTML = position.coords.latitude; document.getElementById("longitude").innerHTML = position.coords.longitude;
+}, );
+}
+</script>
+<div id="coords">Широта: <span id="latitude">Unknown</span>
+Долгота: <span id="longitude">Unknown</span>
+</div>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
+
+<!-- VK Widget -->
+<div id="vk_community_messages"></div>
+<script type="text/javascript">
+VK.Widgets.CommunityMessages("vk_community_messages", 180513651, {expanded: "1",disableButtonTooltip: "1"});
+</script>
+</body>
 </html>
